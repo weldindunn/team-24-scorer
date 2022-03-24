@@ -45,6 +45,12 @@ function App(): JSX.Element {
         setFruits([...fruits, newFruit]);
     }
 
+    function deleteCounter(name: string) {
+        setFruits(
+            fruits.filter((fruit: Fruit): boolean => fruit.name !== name)
+        );
+    }
+
     return (
         <div>
             <div className="App">
@@ -64,6 +70,7 @@ function App(): JSX.Element {
                                 <FruitCounter
                                     fruit={fruit}
                                     editFruit={editFruit}
+                                    deleteCounter={deleteCounter}
                                 ></FruitCounter>
                             </div>
                         ))}

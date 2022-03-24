@@ -5,11 +5,13 @@ import { Fruit } from "../interfaces/Fruit";
 interface fruitCounterProps {
     fruit: Fruit;
     editFruit: (fruit: Fruit) => void;
+    deleteCounter: (name: string) => void;
 }
 
 export function FruitCounter({
     fruit,
-    editFruit
+    editFruit,
+    deleteCounter
 }: fruitCounterProps): JSX.Element {
     function addCounter(): void {
         editFruit({ ...fruit, total: fruit.total + 1 });
@@ -21,14 +23,8 @@ export function FruitCounter({
         editFruit({ ...fruit, total: 0 });
     }
 
-    //This needs to change
-    function deletecounter(): void {
-        const lable = window.document.getElementById(fruit.name);
-        if (lable === null) {
-            alert("oops");
-        } else {
-            lable.style.display = "none";
-        }
+    function fireCounter(): void {
+        deleteCounter(fruit.name);
     }
 
     return (
@@ -48,7 +44,7 @@ export function FruitCounter({
                                 <Button onClick={addCounter}>+</Button>
                                 <Button onClick={minusCounter}>-</Button>
                                 <Button onClick={reset}>Zero</Button>
-                                <Button onClick={deletecounter}>Delete</Button>
+                                <Button onClick={fireCounter}>Delete</Button>
                             </div>
                         </Row>
                     </div>
