@@ -5,9 +5,9 @@ import { FruitCounter } from "./components/FruitCounter";
 import { Counter } from "./components/Counter";
 //import { Access_and_Add } from "./components/Access-and-Add";
 import { AddCounterButton } from "./components/AddCounterButton";
-import { Fruits } from "./interfaces/Fruits";
+import { Fruit } from "./interfaces/Fruit";
 
-const FRUITS: Fruits[] = [
+const FRUITS: Fruit[] = [
     {
         name: "Apples",
         total: 0
@@ -23,9 +23,9 @@ const FRUITS: Fruits[] = [
 ];
 
 function App(): JSX.Element {
-    const [fruits, setFruits] = useState<Fruits[]>(FRUITS);
+    const [fruits, setFruits] = useState<Fruit[]>(FRUITS);
 
-    function editFruit(fruit: Fruits) {
+    function editFruit(fruit: Fruit) {
         const newFruits = fruits.map((f) =>
             fruit.name === f.name ? fruit : f
         );
@@ -39,6 +39,10 @@ function App(): JSX.Element {
                 return { ...f, total: 0 };
             })
         );
+    }
+
+    function addCounter(newFruit: Fruit) {
+        setFruits([...fruits, newFruit]);
     }
 
     return (
@@ -55,7 +59,7 @@ function App(): JSX.Element {
                 <div>
                     <span>Choose the amount of fruit you like!</span>
                     <Stack gap={3}>
-                        {fruits.map((fruit: Fruits) => (
+                        {fruits.map((fruit: Fruit) => (
                             <div key={fruit.name}>
                                 <FruitCounter
                                     fruit={fruit}
@@ -69,9 +73,11 @@ function App(): JSX.Element {
                     </div>
                     <hr />
                 </div>
-                {/* <div>
-                    <AddCounterButton addName={addName}></AddCounterButton>
-                </div> */}
+                <div>
+                    <AddCounterButton
+                        addCounter={addCounter}
+                    ></AddCounterButton>
+                </div>
             </div>
         </div>
     );

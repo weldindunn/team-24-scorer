@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Row } from "react-bootstrap";
-import { Fruits } from "../interfaces/Fruits";
+import { Fruit } from "../interfaces/Fruit";
 
 interface fruitCounterProps {
-    fruit: Fruits;
-    editFruit: (fruit: Fruits) => void;
+    fruit: Fruit;
+    editFruit: (fruit: Fruit) => void;
 }
 
 export function FruitCounter({
@@ -20,6 +20,8 @@ export function FruitCounter({
     function reset(): void {
         editFruit({ ...fruit, total: 0 });
     }
+
+    //This needs to change
     function deletecounter(): void {
         const lable = window.document.getElementById(fruit.name);
         if (lable === null) {

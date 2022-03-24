@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button, Form, Row } from "react-bootstrap";
+import { Fruit } from "../interfaces/Fruit";
 
 export function AddCounterButton({
-    addName
+    addCounter
 }: {
-    addName: (name: string) => void;
+    addCounter: (fruit: Fruit) => void;
 }): JSX.Element {
     const [visible, setVisibility] = useState<boolean>(false);
     const [name, setName] = useState<string>("");
@@ -18,7 +19,7 @@ export function AddCounterButton({
     }
 
     function saveCounter() {
-        addName(name);
+        addCounter({ name: name, total: 0 });
         setInvisible();
     }
 
