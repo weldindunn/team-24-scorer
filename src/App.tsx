@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
-import { CounterApple } from "./components/CounterApple";
-import { CounterBanana } from "./components/CounterBanana";
-import { CounterOrange } from "./components/CounterOrange";
+import { FruitCounter } from "./components/FruitCounter";
 import { Counter } from "./components/Counter";
 import { Access_and_Add } from "./components/Access-and-Add";
 
@@ -16,20 +14,15 @@ function App(): JSX.Element {
                 <p>Welcome to our wonderful counter!</p>
                 <div style={{ textAlign: "center" }}>
                     <Counter></Counter>
-                    <span>Choose the amount of fruit you like</span>
+                    <hr />
                 </div>
-            </div>
-            <div style={{ textAlign: "center" }}>
-                <CounterApple></CounterApple>
-            </div>
-            <div style={{ textAlign: "center" }}>
-                <CounterBanana></CounterBanana>
-            </div>
-            <div style={{ textAlign: "center" }}>
-                <CounterOrange></CounterOrange>
-            </div>
-            <div style={{ textAlign: "center" }}>
-                <Access_and_Add></Access_and_Add>
+                <div>
+                    <span>Choose the amount of fruit you like!</span>
+                    <FruitCounter name={"Apples"}></FruitCounter>
+                    <FruitCounter name={"Oranges"}></FruitCounter>
+                    <FruitCounter name="Bananas"></FruitCounter>
+                    <Access_and_Add></Access_and_Add>
+                </div>
             </div>
         </div>
     );

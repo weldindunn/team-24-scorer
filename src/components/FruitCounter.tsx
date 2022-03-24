@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 
-export function CounterApple(): JSX.Element {
+export function FruitCounter({ name }: { name: string }): JSX.Element {
     const [count, setCount] = useState<number>(0);
     const [count1, setminusCount] = useState<number>(0);
     const [total, settotal] = useState<number>(0);
@@ -34,13 +34,22 @@ export function CounterApple(): JSX.Element {
             <div>
                 <div>
                     <div id="counter">
-                        🍎:
-                        {total}
-                        <Button onClick={addCounter}>+</Button>
-                        <Button onClick={minusCounter}>-</Button>
-                        <Button onClick={gettotal}>Total</Button>
-                        <Button onClick={reset}>Zero</Button>
-                        <Button onClick={deletecounter}>Delete</Button>
+                        <Row>
+                            <div>
+                                {name}
+                                {": "}
+                                {total}
+                            </div>
+                        </Row>
+                        <Row>
+                            <div>
+                                <Button onClick={addCounter}>+</Button>
+                                <Button onClick={minusCounter}>-</Button>
+                                <Button onClick={gettotal}>Total</Button>
+                                <Button onClick={reset}>Zero</Button>
+                                <Button onClick={deletecounter}>Delete</Button>
+                            </div>
+                        </Row>
                     </div>
                 </div>
             </div>
