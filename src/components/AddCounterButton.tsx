@@ -31,16 +31,14 @@ export function AddCounterButton({
                 {visible ? (
                     <div>
                         <div>
-                            <div>
-                                <Form.Group as={Row}>
-                                    <Form.Control>
-                                        value={name}, onChange=
-                                        {(
-                                            event: React.ChangeEvent<HTMLInputElement>
-                                        ) => setName(event.target.value)}
-                                    </Form.Control>
-                                </Form.Group>
-                            </div>
+                            <Form.Group as={Row}>
+                                <Form.Control
+                                    value={name}
+                                    onChange={(
+                                        event: React.ChangeEvent<HTMLInputElement>
+                                    ) => setName(event.target.value)}
+                                />
+                            </Form.Group>
                         </div>
                         <div>
                             <Button onClick={saveCounter}>Add</Button>
