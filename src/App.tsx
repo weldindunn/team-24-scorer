@@ -45,6 +45,7 @@ function App(): JSX.Element {
         setFruits([...fruits, newFruit]);
     }
 
+    //Added this so I could commit
     function deleteCounter(name: string) {
         setFruits(
             fruits.filter((fruit: Fruit): boolean => fruit.name !== name)
