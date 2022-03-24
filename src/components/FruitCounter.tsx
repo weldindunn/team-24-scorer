@@ -21,7 +21,7 @@ export function FruitCounter({ name }: { name: string }): JSX.Element {
         settotal(0);
     }
     function deletecounter(): void {
-        const lable = window.document.getElementById("counter");
+        const lable = window.document.getElementById(name);
         if (lable === null) {
             alert("oops");
         } else {
@@ -33,7 +33,7 @@ export function FruitCounter({ name }: { name: string }): JSX.Element {
         <div>
             <div>
                 <div>
-                    <div id="counter">
+                    <div id={name}>
                         <Row>
                             <div>
                                 {name}
