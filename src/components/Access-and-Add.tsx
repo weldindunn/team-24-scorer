@@ -19,7 +19,7 @@ function Reveal({ visible, setVisible }: visible): JSX.Element {
     }
     return (
         <div>
-            <Button onClick={flipVisibility}>Beginning Create Button</Button>
+            <Button onClick={flipVisibility}>Create Button</Button>
         </div>
     );
 }
