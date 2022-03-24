@@ -3,20 +3,21 @@
 > react-scripts test "--coverage"
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (60 ms)
+  ✓ renders the course name somewhere (72 ms)
 
------------------|---------|----------|---------|---------|-------------------
-File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------------|---------|----------|---------|---------|-------------------
-All files        |      50 |      100 |    37.5 |      50 |                   
- src             |     100 |      100 |     100 |     100 |                   
-  App.tsx        |     100 |      100 |     100 |     100 |                   
- src/components  |   46.15 |      100 |   28.57 |   46.15 |                   
-  Counter.tsx    |   66.66 |      100 |      50 |   66.66 | 8                 
-  newCounter.tsx |      40 |      100 |      20 |      40 | 10-21             
------------------|---------|----------|---------|---------|-------------------
+---------------------|---------|----------|---------|---------|-------------------
+File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------|---------|----------|---------|---------|-------------------
+All files            |      48 |       50 |   31.25 |      48 |                   
+ src                 |     100 |      100 |     100 |     100 |                   
+  App.tsx            |     100 |      100 |     100 |     100 |                   
+ src/components      |   45.83 |       50 |   26.66 |   45.83 |                   
+  Access-and-Add.tsx |   45.45 |       50 |      25 |   45.45 | 18,28-33,46,66-73 
+  Counter.tsx        |   66.66 |      100 |      50 |   66.66 | 8                 
+  newCounter.tsx     |      40 |      100 |      20 |      40 | 10-21             
+---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        1.903 s
+Time:        2.021 s
 Ran all test suites.
