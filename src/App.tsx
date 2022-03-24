@@ -21,7 +21,11 @@ function App(): JSX.Element {
                     <FruitCounter name={"Apples"}></FruitCounter>
                     <FruitCounter name={"Oranges"}></FruitCounter>
                     <FruitCounter name="Bananas"></FruitCounter>
+                    <hr />
+                </div>
+                <div>
                     <Access_and_Add></Access_and_Add>
+                    <hr />
                 </div>
             </div>
         </div>
