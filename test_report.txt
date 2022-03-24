@@ -3,21 +3,22 @@
 > react-scripts test "--coverage"
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (62 ms)
+  ✓ renders the course name somewhere (99 ms)
 
----------------------|---------|----------|---------|---------|-------------------
-File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------|---------|----------|---------|---------|-------------------
-All files            |   41.37 |       25 |   29.41 |   41.37 |                   
- src                 |     100 |      100 |     100 |     100 |                   
-  App.tsx            |     100 |      100 |     100 |     100 |                   
- src/components      |   39.28 |       25 |      25 |   39.28 |                   
-  Access-and-Add.tsx |   45.45 |       50 |      25 |   45.45 | 18,28-33,46,66-73 
-  Counter.tsx        |   66.66 |      100 |      50 |   66.66 | 8                 
-  FruitCounter.tsx   |   28.57 |        0 |   16.66 |   28.57 | 10-28             
----------------------|---------|----------|---------|---------|-------------------
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |    31.7 |    16.66 |   20.83 |    31.7 |                   
+ src                   |      80 |      100 |   66.66 |      80 |                   
+  App.tsx              |      80 |      100 |   66.66 |      80 | 15                
+ src/components        |      25 |    16.66 |   14.28 |      25 |                   
+  Access-and-Add.tsx   |       0 |        0 |       0 |       0 | 18-73             
+  AddCounterButton.tsx |    37.5 |       50 |      20 |    37.5 | 13-22,39          
+  Counter.tsx          |   66.66 |      100 |      50 |   66.66 | 8                 
+  FruitCounter.tsx     |   28.57 |        0 |   16.66 |   28.57 | 10-28             
+-----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        1.906 s
+Time:        2.637 s
 Ran all test suites.
