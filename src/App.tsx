@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Counters } from "./components/newCounter";
 import { Counter } from "./components/Counter";
+import { Access_and_Add } from "./components/Access-and-Add";
 
 function App(): JSX.Element {
     return (
@@ -24,6 +25,9 @@ function App(): JSX.Element {
             </div>
             <div style={{ textAlign: "center" }}>
                 🍌<Counters></Counters>
+            </div>
+            <div style={{ textAlign: "center" }}>
+                <Access_and_Add></Access_and_Add>
             </div>
         </div>
     );
