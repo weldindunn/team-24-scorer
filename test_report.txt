@@ -3,22 +3,24 @@
 > react-scripts test "--coverage"
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (99 ms)
+  ✓ renders the course name somewhere (106 ms)
 
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |    31.7 |    16.66 |   20.83 |    31.7 |                   
- src                   |      80 |      100 |   66.66 |      80 |                   
-  App.tsx              |      80 |      100 |   66.66 |      80 | 15                
- src/components        |      25 |    16.66 |   14.28 |      25 |                   
+All files              |   25.64 |    16.66 |   17.24 |   25.64 |                   
+ src                   |   33.33 |        0 |   22.22 |   33.33 |                   
+  App.tsx              |   33.33 |        0 |   22.22 |   33.33 | 29-50             
+ src/components        |   22.22 |       25 |      15 |   22.22 |                   
   Access-and-Add.tsx   |       0 |        0 |       0 |       0 | 18-73             
-  AddCounterButton.tsx |    37.5 |       50 |      20 |    37.5 | 13-22,39          
+  AddCounterButton.tsx |    37.5 |       50 |      20 |    37.5 | 14-23,40          
   Counter.tsx          |   66.66 |      100 |      50 |   66.66 | 8                 
-  FruitCounter.tsx     |   28.57 |        0 |   16.66 |   28.57 | 10-28             
+  FruitCounter.tsx     |      20 |      100 |      20 |      20 | 17-27             
+ src/interfaces        |       0 |        0 |       0 |       0 |                   
+  Fruit.ts             |       0 |        0 |       0 |       0 |                   
 -----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.637 s
+Time:        2.779 s
 Ran all test suites.
