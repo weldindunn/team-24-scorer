@@ -1,18 +1,44 @@
 import React, { useState } from "react";
-import { Stack } from "react-bootstrap";
+import { Button, Stack } from "react-bootstrap";
 import "./App.css";
 import { FruitCounter } from "./components/FruitCounter";
 import { Counter } from "./components/Counter";
 //import { Access_and_Add } from "./components/Access-and-Add";
 import { AddCounterButton } from "./components/AddCounterButton";
+import { Fruits } from "./interfaces/Fruits";
 
-const NAMES = ["Apples", "Oranges", "Bananas"];
+const FRUITS: Fruits[] = [
+    {
+        name: "Apples",
+        total: 0
+    },
+    {
+        name: "Oranges",
+        total: 0
+    },
+    {
+        name: "Bananas",
+        total: 0
+    }
+];
 
 function App(): JSX.Element {
-    const [names, setNames] = useState<string[]>(NAMES);
+    const [fruits, setFruits] = useState<Fruits[]>(FRUITS);
 
-    function addName(name: string) {
-        setNames([...names, name]);
+    function editFruit(fruit: Fruits) {
+        const newFruits = fruits.map((f) =>
+            fruit.name === f.name ? fruit : f
+        );
+
+        setFruits(newFruits);
+    }
+
+    function zerofruits(): void {
+        setFruits(
+            fruits.map((f) => {
+                return { ...f, total: 0 };
+            })
+        );
     }
 
     return (
@@ -29,17 +55,23 @@ function App(): JSX.Element {
                 <div>
                     <span>Choose the amount of fruit you like!</span>
                     <Stack gap={3}>
-                        {names.map((name: string) => (
-                            <div key={name}>
-                                <FruitCounter name={name}></FruitCounter>
+                        {fruits.map((fruit: Fruits) => (
+                            <div key={fruit.name}>
+                                <FruitCounter
+                                    fruit={fruit}
+                                    editFruit={editFruit}
+                                ></FruitCounter>
                             </div>
                         ))}
                     </Stack>
+                    <div>
+                        <Button onClick={zerofruits}>Zero</Button>
+                    </div>
                     <hr />
                 </div>
-                <div>
+                {/* <div>
                     <AddCounterButton addName={addName}></AddCounterButton>
-                </div>
+                </div> */}
             </div>
         </div>
     );

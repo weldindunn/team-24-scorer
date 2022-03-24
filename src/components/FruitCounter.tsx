@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { Button, Row } from "react-bootstrap";
+import { Fruits } from "../interfaces/Fruits";
 
-export function FruitCounter({ name }: { name: string }): JSX.Element {
-    const [count, setCount] = useState<number>(0);
-    const [count1, setminusCount] = useState<number>(0);
-    const [total, settotal] = useState<number>(0);
+interface fruitCounterProps {
+    fruit: Fruits;
+    editFruit: (fruit: Fruits) => void;
+}
 
+export function FruitCounter({
+    fruit,
+    editFruit
+}: fruitCounterProps): JSX.Element {
     function addCounter(): void {
-        setCount(count + 1);
+        editFruit({ ...fruit, total: fruit.total + 1 });
     }
     function minusCounter(): void {
-        setminusCount(count1 - 1);
-    }
-    function gettotal(): void {
-        settotal(count + count1);
+        editFruit({ ...fruit, total: fruit.total - 1 });
     }
     function reset(): void {
-        setCount(0);
-        setminusCount(0);
-        settotal(0);
+        editFruit({ ...fruit, total: 0 });
     }
     function deletecounter(): void {
-        const lable = window.document.getElementById(name);
+        const lable = window.document.getElementById(fruit.name);
         if (lable === null) {
             alert("oops");
         } else {
@@ -33,19 +33,18 @@ export function FruitCounter({ name }: { name: string }): JSX.Element {
         <div>
             <div>
                 <div>
-                    <div id={name}>
+                    <div id={fruit.name}>
                         <Row>
                             <div>
-                                {name}
+                                {fruit.name}
                                 {": "}
-                                {total}
+                                {fruit.total}
                             </div>
                         </Row>
                         <Row>
                             <div>
                                 <Button onClick={addCounter}>+</Button>
                                 <Button onClick={minusCounter}>-</Button>
-                                <Button onClick={gettotal}>Total</Button>
                                 <Button onClick={reset}>Zero</Button>
                                 <Button onClick={deletecounter}>Delete</Button>
                             </div>
