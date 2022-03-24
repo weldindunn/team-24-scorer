@@ -3,14 +3,14 @@
 > react-scripts test "--coverage"
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (106 ms)
+  ✓ renders the course name somewhere (69 ms)
 
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
 All files              |   25.64 |    16.66 |   17.24 |   25.64 |                   
  src                   |   33.33 |        0 |   22.22 |   33.33 |                   
-  App.tsx              |   33.33 |        0 |   22.22 |   33.33 | 29-50             
+  App.tsx              |   33.33 |        0 |   22.22 |   33.33 | 29-51             
  src/components        |   22.22 |       25 |      15 |   22.22 |                   
   Access-and-Add.tsx   |       0 |        0 |       0 |       0 | 18-73             
   AddCounterButton.tsx |    37.5 |       50 |      20 |    37.5 | 14-23,40          
@@ -22,5 +22,5 @@ All files              |   25.64 |    16.66 |   17.24 |   25.64 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.779 s
+Time:        2.014 s
 Ran all test suites.
