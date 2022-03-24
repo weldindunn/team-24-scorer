@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/team-24-scorer/static/css/main.39f589df.css",
-    "main.js": "/team-24-scorer/static/js/main.549b35bd.js",
+    "main.js": "/team-24-scorer/static/js/main.5e424283.js",
     "static/js/787.4ef7427d.chunk.js": "/team-24-scorer/static/js/787.4ef7427d.chunk.js",
     "index.html": "/team-24-scorer/index.html",
     "main.39f589df.css.map": "/team-24-scorer/static/css/main.39f589df.css.map",
-    "main.549b35bd.js.map": "/team-24-scorer/static/js/main.549b35bd.js.map",
+    "main.5e424283.js.map": "/team-24-scorer/static/js/main.5e424283.js.map",
     "787.4ef7427d.chunk.js.map": "/team-24-scorer/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39f589df.css",
-    "static/js/main.549b35bd.js"
+    "static/js/main.5e424283.js"
   ]
 }
